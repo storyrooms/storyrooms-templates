@@ -1,0 +1,86 @@
+# EXAMPLE CONFIGURATION
+# Presentation Slideshow Template
+
+# Basic Information
+title: "My Presentation"
+author: "Your Name"
+date: "2025-01-31"
+output_dir: "output"
+
+# Slides
+# Each slide can be an image or video
+slides:
+  # Slide 1 - Introduction
+  - image: "slides/slide-01.png"
+    chapter: "Introduction"
+    duration: 3           # seconds (for auto-advance)
+    title: "Welcome"      # optional title overlay
+    
+  # Slide 2 - Main content
+  - image: "slides/slide-02.png"
+    chapter: "Main Content"
+    duration: 4
+    
+  # Slide 3 - Video example
+  - video: "slides/demo.mp4"
+    chapter: "Demo"
+    duration: 10
+    autoplay: true
+    
+  # Slide 4 - Conclusion
+  - image: "slides/slide-03.png"
+    chapter: "Conclusion"
+    duration: 3
+
+# Visual Style
+style:
+  # Colors (hex codes)
+  wall_color: "#f0f0f0"       # Light gray walls
+  floor_color: "#333333"      # Dark floor
+  ceiling_color: "#ffffff"    # White ceiling
+  
+  # Lighting
+  lighting: "bright"          # Options: bright, dramatic, soft, natural
+  
+  # Dimensions
+  corridor_width: 4           # meters
+  corridor_height: 3          # meters
+  slide_spacing: 6            # distance between slides
+  
+  # Frame style
+  frame_color: "#000000"      # Black frames around images
+  frame_width: 0.1            # meters
+  
+# Branding (optional)
+branding:
+  logo: "assets/logo.png"     # Company logo
+  colors:
+    primary: "#0076bc"        # Gothenburg blue example
+    secondary: "#ffd700"      # Gold accent
+  watermark: false            # Add watermark to images?
+
+# Navigation
+navigation:
+  auto_advance: false         # Automatically move between slides
+  show_chapters: true         # Show chapter indicators
+  show_progress: true         # Show progress bar
+  
+# Export Settings
+export:
+  format: "html"              # Options: html, images, video
+  image_quality: "high"       # Options: low, medium, high
+  html_interactive: true      # Allow user navigation in HTML
+  
+# Rendering
+render:
+  samples: 100                # Rayrender samples (quality vs speed)
+  width: 1920                 # Output width
+  height: 1080                # Output height
+  parallel: true              # Use parallel rendering
+
+# Advanced (optional)
+advanced:
+  camera_fov: 60              # Field of view (degrees)
+  camera_height: 1.7          # Camera height (meters, eye level)
+  motion_blur: false          # Add motion blur
+  depth_of_field: false       # Add depth of field effect
